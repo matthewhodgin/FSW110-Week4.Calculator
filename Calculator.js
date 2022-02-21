@@ -2,44 +2,42 @@ function multiplyBy()
 {
         num1 = document.getElementById("firstNumber").value;
         num2 = document.getElementById("secondNumber").value;
-        document.getElementById("result").innerHTML = num1 * num2;
+        document.getElementById("result").value = num1 * num2;
 }
 
 function divideBy() 
 { 
         num1 = document.getElementById("firstNumber").value;
         num2 = document.getElementById("secondNumber").value;
-        document.getElementById("result").innerHTML = num1 / num2;
+        document.getElementById("result").value = num1 / num2;
 }
 
 function additionBy()
 {
         num1 = document.getElementById("firstNumber").value;
         num2 = document.getElementById("secondNumber").value;
-        document.getElementById("result").innerHTML = num1 + num2;
+        document.getElementById("result").value = Number(num1)+ Number(num2);
 }
 
 function subtractionBy() 
 { 
         num1 = document.getElementById("firstNumber").value;
         num2 = document.getElementById("secondNumber").value;
-        document.getElementById("result").innerHTML = num1 - num2;
+        document.getElementById("result").value = num1 - num2;
 }
 
-stylecolor() 
+function stylecolor() 
 {
-        document.getElementById("firstNumber").style.color = "hotpink";
-        document.getElementById("result").style.color = "forestgreen";
-        document.getElementById("secondNumber").style.color = "lightblue"; 
+        document.getElementById("firstNumber").style.backgroundColor = "hotpink";
+        document.getElementById("result").style.backgroundColor = "forestgreen";
+        document.getElementById("secondNumber").style.backgroundColor = "lightblue"; 
+        document.body.style.backgroundColor = "coral";
+        document.getElementById("header").style.fontSize = "50px";
+        document.getElementById("header").style.fontWeight = "bold";
 }
 
-const btn = document.querySelector('button');
+stylecolor()
 
-function random(number) {
-  return Math.floor(Math.random() * (number+1));
-}
 
-btn.addEventListener('click', () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  document.body.style.backgroundColor = rndCol;
-});
+
+
